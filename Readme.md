@@ -1,5 +1,5 @@
 
-# koa-request-body
+# koa-request-body [![Build Status](https://travis-ci.org/thomseddon/koa-request-body.png?branch=master)](https://travis-ci.org/thomseddon/koa-request-body)
 
 Automatically parse request bodies into context.request.body
 
