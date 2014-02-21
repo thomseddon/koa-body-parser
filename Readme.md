@@ -11,6 +11,9 @@ npm install koa-body-parser
 
 ## Options
  - `empty` whether to throw a 415 if the client has indicated there is a body but it cannot be parsed (default: `true`)
+ - `length` length limit of the stream to pass to raw-body (default: `content-length`)
+ - `limit` byte limit of the body to pass to raw-body, throws 413 if body is larger
+ - `encoding` requested encoding (default: `utf8`)
 
 ## Example
 
