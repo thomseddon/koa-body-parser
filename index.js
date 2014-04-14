@@ -24,7 +24,7 @@ module.exports = function (opts) {
 
     if (encoding || length) {
       try {
-        this.request.body = yield parse(this.request, opts);
+        this.request.body = this.request.body || (yield parse(this.request));
       } catch (err) {
         if (err.status !== 415 || !empty)
           throw err;
