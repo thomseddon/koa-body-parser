@@ -22,7 +22,7 @@ module.exports = function (opts) {
     var length = 'content-length' in this.req.headers &&
       this.req.headers['content-length'] !== 0;
 
-    if (encoding || length) {
+    if ((encoding || length) && !this.req._readableState.ended) {
       try {
         this.request.body = yield parse(this.request, opts);
       } catch (err) {
