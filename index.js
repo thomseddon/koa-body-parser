@@ -20,7 +20,7 @@ module.exports = function (opts) {
   return function *(next) {
     var encoding = 'transfer-encoding' in this.req.headers;
     var length = 'content-length' in this.req.headers &&
-      this.req.headers['content-length'] !== 0;
+      this.req.headers['content-length'] != 0;
 
     if ((encoding || length) && !this.req._readableState.ended) {
       try {
