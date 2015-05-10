@@ -22,7 +22,7 @@ module.exports = function (opts) {
 
     if ((encoding || this.request.length) && !this.req._readableState.ended) {
       try {
-        this.request.body = yield parse(this.request, opts);
+        this.request.body = yield parse(this, opts);
       } catch (err) {
         if (err.status !== 415 || !empty)
           throw err;
