@@ -20,7 +20,7 @@ module.exports = function (opts) {
   return function *(next) {
     var encoding = 'transfer-encoding' in this.req.headers;
 
-    if ((encoding || this.request.length) && !this.req._readableState.ended) {
+    if (encoding || this.request.length) {
       try {
         this.request.body = yield parse(this, opts);
       } catch (err) {
