@@ -1,4 +1,8 @@
 
+# This project has been depreciated in favour of: https://github.com/koajs/bodyparser
+
+---
+
 # koa-body-parser [![Build Status](https://travis-ci.org/thomseddon/koa-body-parser.png?branch=master)](https://travis-ci.org/thomseddon/koa-body-parser)
 
 Parse the request body in koa like ya' used to in express
